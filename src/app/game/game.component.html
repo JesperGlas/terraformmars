@@ -1,0 +1,144 @@
+<mat-card *ngFor="let player of this.getPlayers()">
+    <mat-card-title>
+        <i class="fas fa-map-marker-alt" *ngIf="isStartPlayer( player.id )"></i>
+        {{ player.corp }}
+        <i class="fas fa-arrow-circle-left" *ngIf="isActivePlayer( player.id )"></i>
+    </mat-card-title>
+    <mat-card-subtitle>
+        CEO {{ player.name }} {{ this.getModifierValue()}}
+    </mat-card-subtitle>
+    <mat-card-content fxLayout="row">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <button mat-button (click)="this.changeRating( player.id )">
+                            <i class="fas fa-star"></i>
+                            <br>
+                            {{ player.rating }}
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.changePCash( player.id )">
+                            {{ player.p_cash }}
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeCash( player.id )">
+                            <i class="fas fa-euro-sign"></i>
+                            <br>
+                            {{ player.cash }}
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.changePSteel( player.id )">
+                            {{ player.p_steel }}
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeSteel( player.id )">
+                            <i class="fas fa-gavel"></i>
+                            <br>
+                            {{ player.steel }}
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.changePTitanium( player.id )">
+                            {{ player.p_titanium }}
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeTitanium( player.id )">
+                            <i class="fas fa-space-shuttle"></i>
+                            <br>
+                            {{ player.titanium }}
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.changePPlants( player.id )">
+                            {{ player.p_plants }}
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changePlants( player.id )">
+                            <i class="fas fa-leaf"></i>
+                            <br>
+                            {{ player.plants }}
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.changePEnergy( player.id )">
+                            {{ player.p_energy }}
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeEnergy( player.id )">
+                            <i class="fas fa-bolt"></i>
+                            <br>
+                            {{ player.energy }}
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.changePHeat( player.id )">
+                            {{ player.p_heat }}
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeHeat( player.id )">
+                            <i class="fas fa-fire"></i>
+                            <br>
+                            {{ player.heat }}
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <button mat-button (click)="this.sellSteel( player.id )">
+                            <i class="fas fa-gavel"></i>
+                            <br>
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeTSteel( player.id )">
+                            {{ player.t_steel }}<i class="fas fa-euro-sign"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.sellTitanium( player. id )">
+                            <i class="fas fa-space-shuttle"></i>
+                            <br>
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeTTitanium( player.id )">
+                            {{ player.t_titanium }}<i class="fas fa-euro-sign"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.sellPlants( player.id )">
+                            <i class="fas fa-globe-americas"></i>
+                            <br>
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeTPlants( player.id )">
+                            {{ player.t_plants }}<i class="fas fa-leaf"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button (click)="this.sellHeat( player.id )">
+                            <i class="fas fa-thermometer-quarter"></i>
+                            <br>
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                        <br>
+                        <button mat-button (click)="this.changeTHeat( player.id )">
+                            {{ player.t_heat }}<i class="fas fa-fire"></i>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </mat-card-content>
+</mat-card>
+    

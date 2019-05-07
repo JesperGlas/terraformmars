@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <h1>
+        Terraforming Mars
+      </h1>
+    </span>
+    <span class="spacer"></span>
+    <span>
+      <button mat-button (click)="toggleModifier()">
+        <i class="fas fa-minus" *ngIf="!getModifier()"></i>
+        <i class="fas fa-plus" *ngIf="getModifier()"></i>
+      </button>
+      <button mat-button (click)="this.toggleModifierValue()">
+        {{ this.modifier_value }}
+      </button>
+    </span>
+    <span class="spacer"></span>
+    <span>
+      <button mat-raised-button color="accent" (click)="this.nextTurn()">
+        End Turn
+      </button>
+      <button mat-raised-button color="warn" (click)="this.nextGeneration()">
+        End Generation
+      </button>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

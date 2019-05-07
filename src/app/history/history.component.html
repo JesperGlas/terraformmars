@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-subtitle>
+      Last Production Phase
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p *ngFor="let player of this.getProductionPhase()">
+        {{ player }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+<mat-card>
+  <mat-card-subtitle>
+    Current Generation
+  </mat-card-subtitle>
+  <mat-card-content>
+    <p *ngFor="let event of this.getCurrentGenerationHistory(0)">
+      {{ event }}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-subtitle>
+    Previous Generation
+  </mat-card-subtitle>
+  <mat-card-content>
+    <p *ngFor="let event of this.getPreviousGenerationHistory(1)">
+      {{ event }}
+    </p>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,32 @@
+<mat-toolbar color="accent">
+  <span>
+    <button mat-button (click)="this.changeGeneration()">
+      <i class="fas fa-calendar-alt"></i>
+      {{ getGeneration() }}
+    </button>
+  </span>
+  <span>
+    <button mat-button (click)="this.changeTurn()">
+        <i class="fas fa-hourglass-end"></i>
+        {{ getTurn() }}
+    </button>
+  </span>
+  <span>
+    <button mat-button (click)="this.changeOxygen()">
+      <i class="fas fa-cloud"></i>
+      {{ getOxygen() }}%
+    </button>
+  </span>
+  <span>
+    <button mat-button (click)="this.changeTemperature()">
+      <i class="fas fa-thermometer-quarter"></i>
+      {{ getTemperature() }}°C
+    </button>
+  </span>
+  <span>
+    <button mat-button (click)="this.changeOcean()">
+      <i class="fas fa-tint"></i>
+      {{ getOcean() }}
+    </button>
+  </span>
+</mat-toolbar>
