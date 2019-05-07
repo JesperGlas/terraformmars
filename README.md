@@ -1,7 +1,7 @@
 # Description
 A project to create an online interface for the boardgame Terraforming Mars.
 
-# Angular
+## Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
